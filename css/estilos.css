@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Geologica:wght@100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+nav {
+    color: white;
+    width: 100vw;
+    height: 18.83vh;
+    background-color: rgb(142, 170, 243);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 19vh;
+    background-color: black;
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+
+}
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   /*manejar el espacio entre las filas de elementos con flex*/
+   height: 150vh;
+
+
+}
+
+main div {
+    width: 40.3%;
+  
+
+}
+
+div img, video {
+width: 100%;
+
+}
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 40px;
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+
+    font-weight: 500;
+
+
+}
+
+header h1 {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 400;
+
+}
+
+header h3 {
+    text-transform: uppercase;
+    color: rgb(142, 170, 243);
+    letter-spacing: 5px;
+
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+a:hover {
+    font-weight: bold;
+    color: #4C4C9D
+}
+
+
+.logo {
+    width: 250px;
+    height: 250px;
+    background-image: url('path/to/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: rotate 8s linear infinite;
+    animation-delay: 1s;
+}
+
+
+
+div img:hover {
+    transform: scale(1.2);
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header a {
+
+    color: #ffffff;
+    background-color: #92abed;
+
+}
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: white;
+    font-size: 4vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+.lightboxOverlay { background-color: gray;
+  
+
+}
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
